@@ -1,0 +1,181 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.png');  /* Image de fond */
+    background-size: cover;  /* Couvrir tout l'écran */
+    background-position: center;  /* Centrer l'image */
+    background-attachment: fixed;  /* Garder l'image fixe lors du défilement */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Centrer le contenu de manière générale */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header - image du titre de l'album */
+.album-title {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Section de la couverture de l'album */
+.album-cover {
+    margin-bottom: 30px;
+}
+
+.cover {
+    width: 82%;  /* Réduit la taille de 18% */
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte descriptif de l'album dans une case noire */
+.album-description {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.5);  /* Fond noir avec opacité de 50% */
+    color: #fff;  /* Texte blanc */
+    padding: 20px;
+    line-height: 1.25;  /* Interligne réduit */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;  /* Coins arrondis pour la boîte */
+}
+
+/* Réduction de l'espacement entre les paragraphes (3/4 moins que la valeur d'origine) */
+.album-description p {
+    margin-bottom: 0.5rem;  /* Réduit l'espacement de trois quarts */
+}
+
+/* Citations ou textes en italique pour plus de distinction */
+.album-description em {
+    font-style: italic;
+    color: #1b904e;  /* Couleur différente pour mettre en avant le nom de l'album */
+}
+
+/* Titres des sections */
+.section-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1b904e;  /* Couleur des titres */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #1b904e;  /* Couleur de la barre sous le titre */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Section "Mes derniers clips" */
+.video-clips-section {
+    margin-bottom: 40px;
+}
+
+/* Les vidéos des clips */
+.video-clips {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* Espacement entre les vidéos */
+    max-width: 800px; /* Limite la largeur au même que la boîte de texte descriptif */
+    margin: 0 auto;  /* Centrer */
+}
+
+/* Conteneur des vidéos pour maintenir le ratio 16:9 */
+.video-embed {
+    position: relative;
+    width: 48%;  /* Chaque vidéo prendra environ 48% de la largeur */
+    padding-top: 27.0%;  /* C'est le ratio 16:9, soit 9/16 = 0.5625 (hauteur / largeur) */
+    background-color: #000;  /* Fond noir pour les vidéos */
+}
+
+/* L'iframe dans le conteneur */
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Section de liens des plateformes de musique */
+.music-links-section {
+    margin-bottom: 20px;  /* Réduit la marge de 50% par rapport à la valeur précédente */
+}
+
+/* Les logos des plateformes de musique */
+.music-links a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.platform-logo {
+    width: 80px;  /* Taille des logos (ajusté à la taille d'origine) */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Effet de survol des logos des plateformes */
+.music-links a:hover .platform-logo {
+    transform: scale(1.1);  /* Légère augmentation de la taille au survol */
+}
+
+/* Liens vers les réseaux sociaux */
+.social-links-section {
+    margin-bottom: 40px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #007BFF;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* Style des logos des réseaux sociaux */
+.social-logo {
+    width: 48px;  /* Taille des logos des réseaux sociaux */
+    height: auto;
+}
+
+/* Liens vers les réseaux sociaux */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 66px;
+}
